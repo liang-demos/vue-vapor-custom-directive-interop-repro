@@ -2,5 +2,10 @@ import { createVaporApp, vaporInteropPlugin } from 'vue'
 import Foo from './Foo.vue'
 import Bar from './Bar.vue'
 
-createVaporApp(Bar).mount('#bar')
-createVaporApp(Foo).use(vaporInteropPlugin).mount('#foo')
+
+const mode = "<component>" // or "interop"
+
+if (mode === "<component>"){
+createVaporApp(Bar).mount('#bar')}else if(mode === "interop"){
+  createVaporApp(Foo).use(vaporInteropPlugin).mount('#foo')
+}
