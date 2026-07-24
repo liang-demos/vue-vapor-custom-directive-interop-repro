@@ -1,4 +1,6 @@
 import { createVaporApp, vaporInteropPlugin } from 'vue'
-import App from './App.vue'
+import Foo from './Foo.vue'
+import Bar from './Bar.vue'
 
-createVaporApp(App).use(vaporInteropPlugin).mount('#app')
+createVaporApp(Bar).mount('#bar')
+createVaporApp(Foo).use(vaporInteropPlugin).mount('#foo')
