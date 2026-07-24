@@ -15,3 +15,5 @@ Open the browser console. The directive logs the fragment and throws:
 ```text
 TypeError: element.setAttribute is not a function
 ```
+
+Change the `mode` variable in `src/main.js` to switch to different cases.
